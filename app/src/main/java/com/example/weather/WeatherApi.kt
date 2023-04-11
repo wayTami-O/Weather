@@ -10,5 +10,5 @@ interface WeatherApi {
 
     @GET("forecast?")
     @Headers("X-Yandex-API-Key: 387b0b5e-b403-4b1e-bd00-77f6daf162f2")
-    fun getWeather(@Query("lat") lat: Double, @Query("lon") lon: Double): Response<Weather>
+    suspend fun getWeather(@Query("lat") lat: Double, @Query("lon") lon: Double): Weather
 }
